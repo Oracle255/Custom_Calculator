@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A9500"
+    tools:context=".FrontEnd.Activity.DownloadCalculatorActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LL_Download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20sp">
+
+            <EditText
+                android:id="@+id/inp_download_speed"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="serif-monospace"
+                android:hint="input download speed"
+                android:inputType="number|numberDecimal"
+                android:text="512" />
+
+            <!--            <ListView-->
+            <!--                android:id="@+id/list_download_speed"-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:entries="@array/format" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL_FILE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="50sp">
+
+            <EditText
+                android:id="@+id/inp_file_size"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="serif-monospace"
+                android:hint="input file size"
+                android:inputType="number|numberDecimal"
+                android:text="1024" />
+
+            <!--            <ListView-->
+            <!--                android:id="@+id/list_file_size"-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:entries="@array/format"-->
+            <!--                android:layout_height="match_parent" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Calculate Now"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="-400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:id="@+id/table_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/lb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TIME"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_text_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Hour"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_text_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Minute"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_text_second"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Second"
+                android:textSize="14sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lb_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ESTIMATE"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_value_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_value_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lb_value_second"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
